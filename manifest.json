@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Google Color Change",
+    "description": "Change color of google based on button",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches" : ["https://www.google.com/"],
+            "css": ["css/style.css"],
+            "js": ["js/realtor.js"]
+        }
+    ]
+
+}

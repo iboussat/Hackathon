@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+.colorButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btnRed{
+    background-color: red;
+}
+
+.btnGreen{
+    background-color: green;
+}
+
+.btnBG1{
+    background-color: blueviolet;
+}
+
+.btnChangeName{
+    background-color: aquamarine;
+}
+
+.k1zIA{
+    font-size: 2rem;
+}
