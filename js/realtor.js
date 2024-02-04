@@ -3,7 +3,7 @@ let colorButtons =
 <button type = "button" class = "btnRed">RED</button>
 <button type = "button" class = "btnGreen">GREEN</button>
 <button type = "button" class = "btnBG1">Background Image</button>
-<button type = "button" class = "btnChangeName">Change Name!</button>
+<button type = "button" class = "btnChangeName">Something Special!</button>
 </div>`;
 
 const buttonPosition = document.querySelector('body')
@@ -18,20 +18,27 @@ let redButton = document.querySelector('.btnRed');
 redButton.addEventListener('click', (e) => {
     const bodyDiv = document.querySelector('body');
     bodyDiv.style.backgroundImage = 'none';
-    bodyDiv.style.backgroundColor = 'red';
+    bodyDiv.style.backgroundImage = 'linear-gradient(pink, red)';
 });
+
 
 let greenButton = document.querySelector('.btnGreen');
 greenButton.addEventListener('click', (e) => {
     const bodyDiv = document.querySelector('body');
     bodyDiv.style.backgroundImage = 'none';
-    bodyDiv.style.backgroundColor = 'green';
+    bodyDiv.style.backgroundImage = 'linear-gradient(green, white)';
 });
 
 let bgButton_1 = document.querySelector('.btnBG1');
 bgButton_1.addEventListener('click', (e) => {
     const bodyDiv = document.querySelector('body');
-    bodyDiv.style.backgroundImage = 'url("https://media.istockphoto.com/id/1314054062/vector/abstract-simply-background-with-natural-line-arts.jpg?s=612x612&w=0&k=20&c=QtBb0IP9iQISX0jsNVdOgbX7VCrCfXWpA9uUMd9c4q4=")';
+    bodyDiv.style.backgroundSize = 'cover'
+
+    fetch('https://source.unsplash.com/random')
+    .then(image => {
+        bodyDiv.style.backgroundImage = `url(${image.url})`;
+        console.log('imgurl', image)
+    });
 });
 
 
@@ -42,18 +49,18 @@ changeName.addEventListener('click', (e) => {
     if(googleImage){
         googleImage.remove();
     }
-    // googleImage.remove();
+
     let centerSpot = document.querySelector('.k1zIA');
 
     fetch('https://api.quotable.io/random')
     .then(data => data.json())
     .then(quote => {
         centerSpot.innerHTML = quote.content;
-        console.log(quote)
+        console.log('quote', quote)
     });
 
-    //centerSpot.innerHTML = "Smile Everyday! :)";
-    centerSpot.style.paddingTop = '1rem';
+    centerSpot.style.backgroundImage = 'linear-gradient(rgb(239, 220, 46), rgb(109, 109, 177))'
+    centerSpot.style.width = '100%'
 });
 
 

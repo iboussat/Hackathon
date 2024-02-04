@@ -7,26 +7,65 @@ body{
 
 .colorButton {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 5rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .btnRed{
     background-color: red;
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    color: bisque;
 }
+.btnRed:hover {
+    background-color: rgb(210, 113, 136);
+    }
 
 .btnGreen{
     background-color: green;
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    color: bisque;
 }
+.btnGreen:hover {
+    background-color: rgb(88, 219, 149);
+    }
 
 .btnBG1{
-    background-color: blueviolet;
+    background-color: rgb(97, 67, 124);
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    color: bisque;
+    font-size: 1rem;
 }
+.btnBG1:hover {
+    background-color: rgb(195, 149, 231);
+    }
 
 .btnChangeName{
-    background-color: aquamarine;
+    background-color: rgb(224, 241, 41);
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    color: rgb(43, 41, 37);
+    font-size: 1rem;
 }
+.btnChangeName:hover {
+    background-color: rgb(228, 238, 185);
+    }
 
 .k1zIA{
-    font-size: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 3rem;
+    color: rgb(255, 255, 255);
 }
